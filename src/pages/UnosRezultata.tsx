@@ -52,7 +52,7 @@ export default function UnosRezultata() {
                       1
                     </span>
                   </td>
-                  <td className="px-4 py-2.5 font-medium text-gray-800">NK Budućnost</td>
+                  <td className="px-4 py-2.5 font-medium text-gray-800">SK Podgorica</td>
                   <td className="px-4 py-2.5 text-right font-bold text-navy">24 pts</td>
                   <td className="px-4 py-2.5 text-right text-brand">↑</td>
                 </tr>
@@ -62,7 +62,7 @@ export default function UnosRezultata() {
                       2
                     </span>
                   </td>
-                  <td className="px-4 py-2.5 font-medium text-gray-800">NK Zeta</td>
+                  <td className="px-4 py-2.5 font-medium text-gray-800">SK Nikšić</td>
                   <td className="px-4 py-2.5 text-right text-gray-600">19 pts</td>
                   <td className="px-4 py-2.5 text-right text-gray-400">—</td>
                 </tr>
@@ -72,7 +72,7 @@ export default function UnosRezultata() {
                       3
                     </span>
                   </td>
-                  <td className="px-4 py-2.5 font-medium text-gray-800">FK Jezero</td>
+                  <td className="px-4 py-2.5 font-medium text-gray-800">SK Bar</td>
                   <td className="px-4 py-2.5 text-right text-gray-600">17 pts</td>
                   <td className="px-4 py-2.5 text-right text-red-500">↓</td>
                 </tr>
