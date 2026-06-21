@@ -15,10 +15,19 @@ const AppContext = createContext<AppContextType>({
 });
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [isAdminView, setIsAdminView] = useState(true);
+  const [isAdminView, setIsAdminView] = useState<boolean>(() => {
+    const stored = localStorage.getItem('isAdminView');
+    return stored !== null ? stored === 'true' : true;
+  });
   const [isSkeleton, setSkeleton] = useState(false);
 
-  const toggleView = () => setIsAdminView((prev) => !prev);
+  const toggleView = () => {
+    setIsAdminView((prev) => {
+      const next = !prev;
+      localStorage.setItem('isAdminView', String(next));
+      return next;
+    });
+  };
 
   return (
     <AppContext.Provider value={{ isAdminView, toggleView, isSkeleton, setSkeleton }}>

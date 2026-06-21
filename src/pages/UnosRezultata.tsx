@@ -5,7 +5,9 @@ import { CLUBS } from '../data';
 type SubmitState = 'idle' | 'success';
 
 export default function UnosRezultata() {
-  const [state, setState] = useState<SubmitState>('idle');
+  const [state, setState] = useState<SubmitState>(() => {
+    return (localStorage.getItem('unosState') as SubmitState) ?? 'idle';
+  });
   const [competition, setCompetition] = useState('Liga CG 2026');
   const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
   const [home, setHome] = useState('');
@@ -16,10 +18,12 @@ export default function UnosRezultata() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    localStorage.setItem('unosState', 'success');
     setState('success');
   };
 
   const handleReset = () => {
+    localStorage.removeItem('unosState');
     setState('idle');
     setHomeScore('');
     setAwayScore('');
